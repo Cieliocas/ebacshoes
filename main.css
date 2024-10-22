@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -12,7 +16,7 @@ body {
 
 header {
     background-color: #3868D6;
-    padding: 0.6em 0;
+    padding: 0.4em 0;
 }
 
 header h1 {
@@ -25,7 +29,7 @@ footer {
     background-color: #3868D6;
     color: white;
     text-align: center;
-    padding: 0.4em 0;
+    padding: 0.2em 0;
     margin-top: 40px;
 }
 
@@ -36,9 +40,9 @@ footer {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1em;
 }
 
 .menu {
@@ -75,7 +79,7 @@ footer {
 }
 
 .sobre-conteudo img {
-    width: 30em;
+    width: 25em;
     border-radius: 5px;
 }
 
@@ -222,6 +226,14 @@ footer {
         justify-content: center;
         margin: 0;
         padding: 0;
+    }
+
+    .sobre-texto {
+        font-size: 1.6em;
+    }
+
+    .produto > p {
+        font-size: 110%;
     }
 
     .sobre-conteudo img, .sobre-texto {
