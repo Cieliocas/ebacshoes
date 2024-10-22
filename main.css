@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,20 +11,21 @@ body {
 }
 
 header {
-    background-color: blue;
-    padding: 20px 0;
+    background-color: #3868D6;
+    padding: 0.6em 0;
 }
 
 header h1 {
     color: white;
     margin-left: 20px;
+    font-style: italic;
 }
 
 footer {
-    background-color: blue;
+    background-color: #3868D6;
     color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 0.4em 0;
     margin-top: 40px;
 }
 
@@ -59,8 +60,8 @@ footer {
 
 .linha {
     height: 3px;
-    background-color: blue;
-    margin: 10px 0 20px;
+    background-color: #3868D6;
+    margin: 20px 0 40px;
 }
 
 .sobre-a-loja {
@@ -70,11 +71,11 @@ footer {
 .sobre-conteudo {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .sobre-conteudo img {
-    width: 45%;
+    width: 30em;
     border-radius: 5px;
 }
 
@@ -137,7 +138,7 @@ footer {
 }
 
 .produto button {
-    background-color: blue;
+    background-color: #3868D6;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -148,13 +149,19 @@ footer {
 }
 
 .produto button:hover {
-    background-color: blue;
+    background-color: #3868D6;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .header-content {
         flex-direction: row;
         text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        align-items: flex-end;
+        margin-right: 0;
     }
 
     .sobre-conteudo {
@@ -165,11 +172,6 @@ footer {
     .sobre-conteudo img, .sobre-texto {
         width: 100%;
         margin-bottom: 20px;
-    }
-
-    .grid-produtos {
-        flex-direction: column;
-        align-items: center;
     }
 
     .produto {
@@ -198,7 +200,37 @@ footer {
         font-size: 0.9rem;
     }
 
+    .sobre-conteudo img, .sobre-texto {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
     footer {
         font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sobre-conteudo img, .sobre-texto {
+        width: 96%;
+        margin: 1em;
+        justify-content: center;
+    }
+
+    .grid-produtos {
+        grid-template-columns: repeat(2, 49%);
     }
 }
